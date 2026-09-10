@@ -1,0 +1,47 @@
+{
+  "schema_url": "https://opentelemetry.io/schemas/1.36.0",
+  "resource": {
+    "service.name": "propeliq.ctx-tracker",
+    "gen_ai.framework": "copilot",
+    "user.name": "AryanPatel",
+    "user.full_name": "aryankanini",
+    "user.id": "AryanPatel",
+    "user.email": "aryan.patel@kanini.com",
+    "host.name": "KANINI-LTP-429",
+    "os.type": "windows",
+    "os.version": "11",
+    "host.arch": "AMD64"
+  },
+  "gen_ai.conversation.id": "copilot-25264-HealthcareAccelerator-65786b8c",
+  "gen_ai.provider.name": "openai",
+  "gen_ai.operation.name": "chat",
+  "gen_ai.request.model": null,
+  "gen_ai.system_instructions": [],
+  "context_window": {
+    "limit_tokens": 128000,
+    "counting_method": "tiktoken"
+  },
+  "created_at": "2026-09-10T15:36:37",
+  "updated_at": "2026-09-10T15:36:37",
+  "_cumulative_input_tokens": 272,
+  "turns": [
+    {
+      "turn_id": 1,
+      "event.name": "gen_ai.client.inference.operation.details",
+      "start_time": "2026-09-10T15:36:37",
+      "gen_ai.operation.name": "chat",
+      "gen_ai.input.messages": [
+        {
+          "role": "user",
+          "parts": [
+            {
+              "type": "text",
+              "content": "Perform a read-only evaluation of the six generated Markdown task artifacts in d:\\HealthcareAccelerator according to the available task-template and plan-development workflow requirements. Do not edit any files. Review each file independently: .propel/context/tasks/EP-TECH/us_003/task_001_durable-job-backend.md, task_002_durable-job-database.md, task_003_durable-job-infrastructure.md; .propel/context/tasks/EP-TECH/us_004/task_001_build-and-deployment-devops.md; .propel/context/tasks/EP-TECH/us_005/task_001_readiness-and-correlation-backend.md, task_002_observability-infrastructure.md. Verify exact task template structure excluding conditional UI/AI/Mobile sections, traceability to the corresponding story and acceptance criteria, one technology layer per task, checklist item count 1-8, task effort <=8 hours, no implementation test tasks, and no downstream workflow invocation. Report a compact table with file, score / 100, pass/fail, and findings. Base your findings only on files you actually read."
+            }
+          ]
+        }
+      ],
+      "gen_ai.usage.input_tokens": 272
+    }
+  ]
+}
