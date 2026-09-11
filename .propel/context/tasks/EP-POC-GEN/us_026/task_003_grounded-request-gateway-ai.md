@@ -67,7 +67,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Require approved source identifiers and versions in every model request. (AC-001)
-- [ ] Attach the approved source context to the model request. (AC-001)
-- [ ] Refuse an empty or unapproved source set with a blocked ungrounded outcome. (edge case)
-- [ ] Keep draft approval state under deterministic application control. (edge case)
+- [x] Require approved source identifiers and versions in every model request. (AC-001)
+- [x] Attach the approved source context to the model request. (AC-001)
+- [x] Refuse an empty or unapproved source set with a blocked ungrounded outcome. (edge case)
+- [x] Keep draft approval state under deterministic application control. (edge case)

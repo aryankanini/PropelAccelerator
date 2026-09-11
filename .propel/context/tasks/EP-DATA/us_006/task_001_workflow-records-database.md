@@ -59,9 +59,9 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Create ProcessingRecord with the required workflow identity and state fields. (AC-001)
-- [ ] Create ExtractedField and Deficiency tables with required ProcessingRecord foreign keys. (AC-001)
-- [ ] Create PlanOfCorrection with exactly one Deficiency parent. (AC-001)
-- [ ] Create ContentRevision records that retain attributable revision history. (AC-001)
-- [ ] Enforce non-null parent relationships and foreign-key integrity for all workflow children. (AC-001)
-- [ ] Reject deletion of a processing record with retained audit data. (edge case)
+- [x] Create ProcessingRecord with the required workflow identity and state fields. (AC-001)
+- [x] Create ExtractedField and Deficiency tables with required ProcessingRecord foreign keys. (AC-001)
+- [x] Create PlanOfCorrection with exactly one Deficiency parent. (AC-001)
+- [x] Create ContentRevision records that retain attributable revision history. (AC-001)
+- [x] Enforce non-null parent relationships and foreign-key integrity for all workflow children. (AC-001)
+- [x] Reject deletion of a processing record with retained audit data. (edge case)

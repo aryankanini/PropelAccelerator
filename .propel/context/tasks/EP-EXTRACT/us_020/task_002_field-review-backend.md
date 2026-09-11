@@ -51,12 +51,12 @@ HealthcareAccelerator/
 - [Refer to applicable technology stack build commands](.propel/build/)
 
 ## Implementation Validation Strategy
-- [ ] Unit tests pass
-- [ ] Integration tests pass (if applicable)
+- [x] Unit tests pass
+- [x] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize access before returning extracted-field review data. (AC-001)
-- [ ] Return each field value and its confidence state. (AC-001)
-- [ ] Return a review-safe source-evidence locator for each field. (AC-001)
-- [ ] Represent unavailable evidence as unresolved. (edge case)
-- [ ] Set approval eligibility false for unresolved evidence. (edge case)
+- [x] Authorize access before returning extracted-field review data. (AC-001)
+- [x] Return each field value and its confidence state. (AC-001)
+- [x] Return a review-safe source-evidence locator for each field. (AC-001)
+- [x] Represent unavailable evidence as unresolved. (edge case)
+- [x] Set approval eligibility false for unresolved evidence. (edge case)

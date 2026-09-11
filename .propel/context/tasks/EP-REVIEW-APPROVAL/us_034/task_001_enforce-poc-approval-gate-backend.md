@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize the approver before evaluating a POC. (AC-001)
-- [ ] Require completed review, all required elements, and CMS support. (AC-001)
-- [ ] Transactionally record approval when all eligibility rules pass. (AC-001)
-- [ ] Exclude rejected and incomplete POCs from authorized use and submission. (edge case)
+- [x] Authorize the approver before evaluating a POC. (AC-001)
+- [x] Require completed review, all required elements, and CMS support. (AC-001)
+- [x] Transactionally record approval when all eligibility rules pass. (AC-001)
+- [x] Exclude rejected and incomplete POCs from authorized use and submission. (edge case)

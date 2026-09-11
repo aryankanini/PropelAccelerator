@@ -64,8 +64,8 @@ HealthcareAccelerator/
 - [ ] Integration tests verify retry bounds, recovery records, approval preservation, and dead-letter settlement.
 
 ## Implementation Checklist
-- [ ] Classify transient storage and LLM dependency failures as retryable worker outcomes. (AC-001)
-- [ ] Apply bounded exponential retries only to retryable dependency failures. (AC-001)
-- [ ] Record a recoverable job failure with a sanitized reason for each retryable outcome. (AC-001)
-- [ ] Preserve the current unapproved content state when dependency processing fails. (AC-001)
-- [ ] Dead-letter the job after its bounded retry attempts are exhausted. (AC-001, edge case)
+- [x] Classify transient storage and LLM dependency failures as retryable worker outcomes. (AC-001)
+- [x] Apply bounded exponential retries only to retryable dependency failures. (AC-001)
+- [x] Record a recoverable job failure with a sanitized reason for each retryable outcome. (AC-001)
+- [x] Preserve the current unapproved content state when dependency processing fails. (AC-001)
+- [x] Dead-letter the job after its bounded retry attempts are exhausted. (AC-001, edge case)

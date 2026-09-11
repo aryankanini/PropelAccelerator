@@ -67,7 +67,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Persist the proposed model or prompt identity and versioned test set for each evaluation run. (AC-001)
-- [ ] Persist every required category result against its evaluation run. (AC-001)
-- [ ] Enforce one result per required category for each run. (AC-001)
-- [ ] Persist a blocked release-gate state when any required category is missing. (edge case)
+- [x] Persist the proposed model or prompt identity and versioned test set for each evaluation run. (AC-001)
+- [x] Persist every required category result against its evaluation run. (AC-001)
+- [x] Enforce one result per required category for each run. (AC-001)
+- [x] Persist a blocked release-gate state when any required category is missing. (edge case)

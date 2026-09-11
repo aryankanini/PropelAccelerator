@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize review access before loading history. (edge case)
-- [ ] Return AI or staff attribution for every revision. (AC-001)
-- [ ] Return reviewer, timestamp, content change, and approval status. (AC-001)
-- [ ] Do not expose history content or reviewer identity to unauthorized callers. (edge case)
+- [x] Authorize review access before loading history. (edge case)
+- [x] Return AI or staff attribution for every revision. (AC-001)
+- [x] Return reviewer, timestamp, content change, and approval status. (AC-001)
+- [x] Do not expose history content or reviewer identity to unauthorized callers. (edge case)

@@ -60,12 +60,12 @@ HealthcareAccelerator/
 - Refer to the applicable Python build commands in `.propel/build/`.
 
 ## Implementation Validation Strategy
-- [ ] Unit tests verify each module port can be composed without an infrastructure adapter import.
-- [ ] Integration tests verify the FastAPI application starts and exposes the typed health response.
+- [x] Unit tests verify each module port can be composed without an infrastructure adapter import.
+- [x] Integration tests verify the FastAPI application starts and exposes the typed health response.
 
 ## Implementation Checklist
-- [ ] Create the FastAPI composition root for AC-001.
-- [ ] Define the seven required application module ports for AC-001.
-- [ ] Keep port contracts free of framework and infrastructure imports for AC-001.
-- [ ] Register module dependencies through the composition root for AC-001.
-- [ ] Define a typed health response model for startup verification.
+- [x] Create the FastAPI composition root for AC-001.
+- [x] Define the seven required application module ports for AC-001.
+- [x] Keep port contracts free of framework and infrastructure imports for AC-001.
+- [x] Register module dependencies through the composition root for AC-001.
+- [x] Define a typed health response model for startup verification.

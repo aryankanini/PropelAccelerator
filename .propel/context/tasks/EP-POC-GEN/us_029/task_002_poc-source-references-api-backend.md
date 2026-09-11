@@ -56,7 +56,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Return every persisted source reference and source-set version for the requested POC draft. (AC-001)
-- [ ] Keep citation metadata separate from validation status in the response. (AC-001)
-- [ ] Return a blocking validation flag for a missing citation. (edge case)
-- [ ] Never label a missing citation as CMS support. (edge case)
+- [x] Return every persisted source reference and source-set version for the requested POC draft. (AC-001)
+- [x] Keep citation metadata separate from validation status in the response. (AC-001)
+- [x] Return a blocking validation flag for a missing citation. (edge case)
+- [x] Never label a missing citation as CMS support. (edge case)

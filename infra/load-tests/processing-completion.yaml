@@ -1,0 +1,11 @@
+version: v1
+name: processing-completion
+document: standard-document.pdf
+queue_acceptance_event: job_queue_accepted
+processing_completion_event: job_processing_completed
+excluded_states:
+  - awaiting_staff_review
+  - under_staff_review
+success_criteria:
+  completion_within_minutes: 10
+  minimum_completion_rate_percent: 95

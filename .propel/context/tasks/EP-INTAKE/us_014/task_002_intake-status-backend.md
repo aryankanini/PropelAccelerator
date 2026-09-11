@@ -56,8 +56,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Define a typed status response with detected format and processing state. (AC-001)
-- [ ] Authorize access before loading the processing-record projection. (edge case)
-- [ ] Return an authorization outcome without document metadata when access is denied. (edge case)
-- [ ] Return the current detected format and processing state for an accessible record. (AC-001)
-- [ ] Prevent error-state records from being represented as approved. (AC-001)
+- [x] Define a typed status response with detected format and processing state. (AC-001)
+- [x] Authorize access before loading the processing-record projection. (edge case)
+- [x] Return an authorization outcome without document metadata when access is denied. (edge case)
+- [x] Return the current detected format and processing state for an accessible record. (AC-001)
+- [x] Prevent error-state records from being represented as approved. (AC-001)

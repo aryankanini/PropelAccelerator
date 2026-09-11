@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Allow POC eligibility only when at least one deficiency is confirmed. (AC-001)
-- [ ] Return an incomplete blocked outcome for a record with no confirmed deficiency. (AC-001)
-- [ ] Prevent POC job publication for a blocked outcome. (AC-001)
-- [ ] Invalidate pending POC work when correction removes the final confirmed deficiency. (edge case)
+- [x] Allow POC eligibility only when at least one deficiency is confirmed. (AC-001)
+- [x] Return an incomplete blocked outcome for a record with no confirmed deficiency. (AC-001)
+- [x] Prevent POC job publication for a blocked outcome. (AC-001)
+- [x] Invalidate pending POC work when correction removes the final confirmed deficiency. (edge case)

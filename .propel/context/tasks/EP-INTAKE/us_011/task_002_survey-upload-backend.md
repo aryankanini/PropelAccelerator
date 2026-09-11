@@ -56,9 +56,9 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Define a typed authenticated multipart upload endpoint. (AC-001)
-- [ ] Reject an empty file before creating storage or processing records. (edge case)
-- [ ] Validate readable supported content before accepting the upload. (AC-001)
-- [ ] Store the accepted document through the immutable-document port. (AC-001)
-- [ ] Create and return the processing-record identifier in the acknowledgement. (AC-001)
-- [ ] Keep the synchronous path bounded to satisfy the NFR-001 response target. (AC-001)
+- [x] Define a typed authenticated multipart upload endpoint. (AC-001)
+- [x] Reject an empty file before creating storage or processing records. (edge case)
+- [x] Validate readable supported content before accepting the upload. (AC-001)
+- [x] Store the accepted document through the immutable-document port. (AC-001)
+- [x] Create and return the processing-record identifier in the acknowledgement. (AC-001)
+- [x] Keep the synchronous path bounded to satisfy the NFR-001 response target. (AC-001)

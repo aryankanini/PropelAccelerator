@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Evaluate submitted sources against overlapping approved sources. (AC-001)
-- [ ] Keep detected conflicts pending and unavailable for grounding. (AC-001)
-- [ ] Record conflict decisions in append-only history. (edge case)
-- [ ] Retain prior decisions after a conflict is resolved. (edge case)
+- [x] Evaluate submitted sources against overlapping approved sources. (AC-001)
+- [x] Keep detected conflicts pending and unavailable for grounding. (AC-001)
+- [x] Record conflict decisions in append-only history. (edge case)
+- [x] Retain prior decisions after a conflict is resolved. (edge case)

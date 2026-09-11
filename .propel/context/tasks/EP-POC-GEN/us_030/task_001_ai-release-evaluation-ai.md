@@ -68,8 +68,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Version the evaluated test set and proposed model or prompt identity. (AC-001)
-- [ ] Record extraction, SOD recall, citation support, POC quality, refusal, and conditional-field results. (AC-001)
-- [ ] Compute release eligibility only after all required category results exist. (AC-001)
-- [ ] Block release promotion when any evaluation category is missing. (edge case)
-- [ ] Keep approval-state transitions under deterministic application rules. (AC-001)
+- [x] Version the evaluated test set and proposed model or prompt identity. (AC-001)
+- [x] Record extraction, SOD recall, citation support, POC quality, refusal, and conditional-field results. (AC-001)
+- [x] Compute release eligibility only after all required category results exist. (AC-001)
+- [x] Block release promotion when any evaluation category is missing. (edge case)
+- [x] Keep approval-state transitions under deterministic application rules. (AC-001)

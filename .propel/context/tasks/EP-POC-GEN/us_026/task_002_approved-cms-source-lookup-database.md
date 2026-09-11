@@ -67,6 +67,6 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Index approved CMS records for Tag and effective-version lookup. (AC-001)
-- [ ] Return only approved source records with identifiers and versions. (AC-001)
-- [ ] Return no fallback rows when no approved source is available. (edge case)
+- [x] Index approved CMS records for Tag and effective-version lookup. (AC-001)
+- [x] Return only approved source records with identifiers and versions. (AC-001)
+- [x] Return no fallback rows when no approved source is available. (edge case)

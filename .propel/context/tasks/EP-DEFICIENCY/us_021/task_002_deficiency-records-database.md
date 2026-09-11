@@ -58,7 +58,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Create one persistent deficiency record per detected boundary. (AC-001)
-- [ ] Persist the source SOD text, Tag, and processing-record foreign key for each deficiency. (AC-001)
-- [ ] Persist each deficiency evidence association without duplicating the parent record. (AC-001)
-- [ ] Constrain segmentation status to distinguish confirmed and correction-required candidates. (AC-001, edge case)
+- [x] Create one persistent deficiency record per detected boundary. (AC-001)
+- [x] Persist the source SOD text, Tag, and processing-record foreign key for each deficiency. (AC-001)
+- [x] Persist each deficiency evidence association without duplicating the parent record. (AC-001)
+- [x] Constrain segmentation status to distinguish confirmed and correction-required candidates. (AC-001, edge case)

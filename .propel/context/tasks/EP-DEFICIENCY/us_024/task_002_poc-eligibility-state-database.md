@@ -54,6 +54,6 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Persist incomplete eligibility when no confirmed deficiency exists. (AC-001)
-- [ ] Record the confirmed-deficiency basis for each pending POC job. (AC-001)
-- [ ] Mark pending POC work invalidated when its confirmed-deficiency basis is removed. (edge case)
+- [x] Persist incomplete eligibility when no confirmed deficiency exists. (AC-001)
+- [x] Record the confirmed-deficiency basis for each pending POC job. (AC-001)
+- [x] Mark pending POC work invalidated when its confirmed-deficiency basis is removed. (edge case)

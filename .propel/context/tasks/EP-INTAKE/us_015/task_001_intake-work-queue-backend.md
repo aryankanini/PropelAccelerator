@@ -56,9 +56,9 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Create an extraction command only for a successfully classified record. (AC-001)
-- [ ] Include stable processing-record and correlation identifiers in the command. (AC-001)
-- [ ] Persist the job and pending state before queue publication. (AC-001)
-- [ ] Publish the command through the application queue port. (AC-001)
-- [ ] Move a publication failure to a retryable state. (edge case)
-- [ ] Prevent a failed publication from indicating extraction has started. (edge case)
+- [x] Create an extraction command only for a successfully classified record. (AC-001)
+- [x] Include stable processing-record and correlation identifiers in the command. (AC-001)
+- [x] Persist the job and pending state before queue publication. (AC-001)
+- [x] Publish the command through the application queue port. (AC-001)
+- [x] Move a publication failure to a retryable state. (edge case)
+- [x] Prevent a failed publication from indicating extraction has started. (edge case)

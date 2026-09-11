@@ -62,9 +62,9 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Configure one authoritative migration history mechanism. (AC-001)
-- [ ] Record a migration version only after successful transactional application. (AC-001, edge case)
-- [ ] Define additive expand stages that preserve existing application reads. (AC-001)
-- [ ] Define migrate and contract stages with explicit compatibility windows. (AC-001)
-- [ ] Require a rollback or point-in-time restore procedure for every migration. (edge case)
-- [ ] Document and validate recovery objectives for production data restoration. (AC-001)
+- [x] Configure one authoritative migration history mechanism. (AC-001)
+- [x] Record a migration version only after successful transactional application. (AC-001, edge case)
+- [x] Define additive expand stages that preserve existing application reads. (AC-001)
+- [x] Define migrate and contract stages with explicit compatibility windows. (AC-001)
+- [x] Require a rollback or point-in-time restore procedure for every migration. (edge case)
+- [x] Document and validate recovery objectives for production data restoration. (AC-001)

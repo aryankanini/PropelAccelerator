@@ -62,8 +62,8 @@ HealthcareAccelerator/
 - [ ] Emit a state transition and verify the operator query shows the required fields within 60 seconds.
 
 ## Implementation Checklist
-- [ ] Route worker state-change telemetry to the centralized monitoring resources. (AC-001)
-- [ ] Create an authorized-operator query for state, retry count, and sanitized failure reason. (AC-001)
-- [ ] Include correlation identifiers needed to associate a telemetry record with its job. (AC-001)
-- [ ] Configure a 60-second freshness threshold for state-change visibility. (AC-001)
-- [ ] Exclude restricted document content and credentials from configured telemetry fields. (AC-001, edge case)
+- [x] Route worker state-change telemetry to the centralized monitoring resources. (AC-001)
+- [x] Create an authorized-operator query for state, retry count, and sanitized failure reason. (AC-001)
+- [x] Include correlation identifiers needed to associate a telemetry record with its job. (AC-001)
+- [x] Configure a 60-second freshness threshold for state-change visibility. (AC-001)
+- [x] Exclude restricted document content and credentials from configured telemetry fields. (AC-001, edge case)

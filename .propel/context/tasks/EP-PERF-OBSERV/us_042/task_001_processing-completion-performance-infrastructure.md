@@ -63,8 +63,8 @@ HealthcareAccelerator/
 - [ ] Run the processing scenario and verify the completion-duration query excludes review time.
 
 ## Implementation Checklist
-- [ ] Define representative standard-document processing load inputs. (AC-001)
-- [ ] Record the queue-acceptance timestamp for every measured job. (AC-001)
-- [ ] Calculate completion duration through terminal processing completion. (AC-001)
-- [ ] Exclude staff-review time from the processing-duration calculation. (AC-001, edge case)
-- [ ] Require at least 95% of accepted jobs to complete within 10 minutes. (AC-001)
+- [x] Define representative standard-document processing load inputs. (AC-001)
+- [x] Record the queue-acceptance timestamp for every measured job. (AC-001)
+- [x] Calculate completion duration through terminal processing completion. (AC-001)
+- [x] Exclude staff-review time from the processing-duration calculation. (AC-001, edge case)
+- [x] Require at least 95% of accepted jobs to complete within 10 minutes. (AC-001)

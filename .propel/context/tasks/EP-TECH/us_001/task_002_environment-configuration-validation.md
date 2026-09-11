@@ -56,12 +56,12 @@ HealthcareAccelerator/
 - Refer to the applicable Python build commands in `.propel/build/`.
 
 ## Implementation Validation Strategy
-- [ ] Unit tests verify missing required configuration produces sanitized validation errors.
-- [ ] Integration tests verify the FastAPI lifespan rejects invalid configuration before requests are accepted.
+- [x] Unit tests verify missing required configuration produces sanitized validation errors.
+- [x] Integration tests verify the FastAPI lifespan rejects invalid configuration before requests are accepted.
 
 ## Implementation Checklist
-- [ ] Define typed required and optional settings for AC-002.
-- [ ] Validate required settings during the FastAPI lifespan for AC-002.
-- [ ] Return the missing key name without a secret value for AC-002.
-- [ ] Disable, rather than silently substitute, an adapter with missing optional settings.
-- [ ] Pass only validated settings to the application composition root.
+- [x] Define typed required and optional settings for AC-002.
+- [x] Validate required settings during the FastAPI lifespan for AC-002.
+- [x] Return the missing key name without a secret value for AC-002.
+- [x] Disable, rather than silently substitute, an adapter with missing optional settings.
+- [x] Pass only validated settings to the application composition root.

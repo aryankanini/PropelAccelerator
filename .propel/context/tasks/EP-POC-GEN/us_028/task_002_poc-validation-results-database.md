@@ -66,6 +66,6 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Persist required-element results and quality score for each POC draft. (AC-001)
-- [ ] Persist validation before the draft enters review. (AC-001)
-- [ ] Constrain missing required elements to an approval-blocking state. (edge case)
+- [x] Persist required-element results and quality score for each POC draft. (AC-001)
+- [x] Persist validation before the draft enters review. (AC-001)
+- [x] Constrain missing required elements to an approval-blocking state. (edge case)

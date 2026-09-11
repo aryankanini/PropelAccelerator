@@ -57,7 +57,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Publish one POC-generation command for every confirmed deficiency. (AC-001)
-- [ ] Use a stable deficiency-scoped identity for each command. (AC-001)
-- [ ] Persist or retrieve the idempotent job outcome before publication. (AC-001)
-- [ ] Return the prior outcome without duplicate publication on repeated finalization. (edge case)
+- [x] Publish one POC-generation command for every confirmed deficiency. (AC-001)
+- [x] Use a stable deficiency-scoped identity for each command. (AC-001)
+- [x] Persist or retrieve the idempotent job outcome before publication. (AC-001)
+- [x] Return the prior outcome without duplicate publication on repeated finalization. (edge case)

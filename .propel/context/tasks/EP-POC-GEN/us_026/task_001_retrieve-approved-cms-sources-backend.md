@@ -69,7 +69,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Accept a confirmed deficiency and Tag as retrieval input. (AC-001)
-- [ ] Select only approved CMS records through the knowledge repository. (AC-001)
-- [ ] Attach source identifiers and versions to the grounded request. (AC-001)
-- [ ] Return a blocked ungrounded result and no approvable draft when no source is approved. (edge case)
+- [x] Accept a confirmed deficiency and Tag as retrieval input. (AC-001)
+- [x] Select only approved CMS records through the knowledge repository. (AC-001)
+- [x] Attach source identifiers and versions to the grounded request. (AC-001)
+- [x] Return a blocked ungrounded result and no approvable draft when no source is approved. (edge case)

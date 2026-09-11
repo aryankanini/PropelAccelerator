@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize the reviewer before reading or changing a field. (AC-001)
-- [ ] Require source evidence before accepting or correcting the field. (edge case)
-- [ ] Persist the decision, reviewer identity, timestamp, and resulting review state. (AC-001)
-- [ ] Keep fields without evidence unresolved and ineligible for approval. (edge case)
+- [x] Authorize the reviewer before reading or changing a field. (AC-001)
+- [x] Require source evidence before accepting or correcting the field. (edge case)
+- [x] Persist the decision, reviewer identity, timestamp, and resulting review state. (AC-001)
+- [x] Keep fields without evidence unresolved and ineligible for approval. (edge case)

@@ -54,7 +54,7 @@ HealthcareAccelerator/
 - [ ] Repository integration tests pass
 
 ## Implementation Checklist
-- [ ] Persist canonical reference, content hash, effective version, approval state, and indexing state. (AC-001)
-- [ ] Constrain source identity and governed version records. (AC-001)
-- [ ] Default records without version metadata to pending. (edge case)
-- [ ] Keep pending sources ineligible for indexing and grounding. (edge case)
+- [x] Persist canonical reference, content hash, effective version, approval state, and indexing state. (AC-001)
+- [x] Constrain source identity and governed version records. (AC-001)
+- [x] Default records without version metadata to pending. (edge case)
+- [x] Keep pending sources ineligible for indexing and grounding. (edge case)

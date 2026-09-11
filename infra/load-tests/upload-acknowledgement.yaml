@@ -1,0 +1,14 @@
+version: v1
+name: upload-acknowledgement
+concurrency: 100
+duration: 15m
+document: standard-document.pdf
+request:
+  method: POST
+  path: /intake/uploads
+  acknowledgement_field: processing_record_id
+success_criteria:
+  acknowledgement_p95_ms: 2000
+telemetry:
+  acknowledgement_event: upload_acknowledged
+  queue_delay_event: upload_queued

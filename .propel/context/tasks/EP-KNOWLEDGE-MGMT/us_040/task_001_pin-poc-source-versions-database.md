@@ -54,7 +54,7 @@ HealthcareAccelerator/
 - [ ] Repository integration tests pass
 
 ## Implementation Checklist
-- [ ] Persist the source-set version used for every generated POC. (AC-001)
-- [ ] Prevent source maintenance from replacing persisted POC provenance. (AC-001)
-- [ ] Allow retired source versions to be retrieved for historical audit. (edge case)
-- [ ] Exclude retired source versions from new grounding selections. (edge case)
+- [x] Persist the source-set version used for every generated POC. (AC-001)
+- [x] Prevent source maintenance from replacing persisted POC provenance. (AC-001)
+- [x] Allow retired source versions to be retrieved for historical audit. (edge case)
+- [x] Exclude retired source versions from new grounding selections. (edge case)

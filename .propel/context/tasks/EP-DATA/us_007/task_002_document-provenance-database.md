@@ -58,8 +58,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Add SourceDocument with a required ProcessingRecord parent identifier. (AC-001)
-- [ ] Persist immutable object identity, media type, and content hash. (AC-001)
-- [ ] Record the approved extraction library name and version for each source document. (AC-001)
-- [ ] Enforce uniqueness for a stored object identity in its configured namespace. (AC-001)
-- [ ] Persist an integrity failure state that prevents downstream processing. (edge case)
+- [x] Add SourceDocument with a required ProcessingRecord parent identifier. (AC-001)
+- [x] Persist immutable object identity, media type, and content hash. (AC-001)
+- [x] Record the approved extraction library name and version for each source document. (AC-001)
+- [x] Enforce uniqueness for a stored object identity in its configured namespace. (AC-001)
+- [x] Persist an integrity failure state that prevents downstream processing. (edge case)

@@ -54,8 +54,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Define the three supported deterministic format outcomes. (AC-001)
-- [ ] Evaluate uploaded content markers before extraction is scheduled. (AC-001)
-- [ ] Persist exactly one detected format on a successful classification. (AC-001)
-- [ ] Reject ambiguous marker matches into a non-approved error state. (edge case)
-- [ ] Prevent extraction scheduling when classification is unsuccessful. (edge case)
+- [x] Define the three supported deterministic format outcomes. (AC-001)
+- [x] Evaluate uploaded content markers before extraction is scheduled. (AC-001)
+- [x] Persist exactly one detected format on a successful classification. (AC-001)
+- [x] Reject ambiguous marker matches into a non-approved error state. (edge case)
+- [x] Prevent extraction scheduling when classification is unsuccessful. (edge case)

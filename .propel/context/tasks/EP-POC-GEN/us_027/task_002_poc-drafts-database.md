@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Enforce exactly one active draft per deficiency. (AC-001)
-- [ ] Persist the source-set version with every draft. (AC-001)
-- [ ] Record a generation error against the failed deficiency. (edge case)
-- [ ] Preserve manual-drafting eligibility after a generation failure. (edge case)
+- [x] Enforce exactly one active draft per deficiency. (AC-001)
+- [x] Persist the source-set version with every draft. (AC-001)
+- [x] Record a generation error against the failed deficiency. (edge case)
+- [x] Preserve manual-drafting eligibility after a generation failure. (edge case)

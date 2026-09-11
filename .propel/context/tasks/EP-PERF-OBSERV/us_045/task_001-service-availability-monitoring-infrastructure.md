@@ -62,8 +62,8 @@ HealthcareAccelerator/
 - [ ] Simulate a threshold breach and verify alert payload and monthly availability calculation.
 
 ## Implementation Checklist
-- [ ] Configure API and worker health signals for deployed revisions. (AC-001)
-- [ ] Create actionable alerts for breached health or availability thresholds. (AC-001)
-- [ ] Calculate monthly API availability against the 99.9% target. (AC-001)
-- [ ] Publish the availability result through the operational monitoring view. (AC-001)
-- [ ] Exclude only maintenance announced at least 24 hours ahead from the calculation. (AC-001, edge case)
+- [x] Configure API and worker health signals for deployed revisions. (AC-001)
+- [x] Create actionable alerts for breached health or availability thresholds. (AC-001)
+- [x] Calculate monthly API availability against the 99.9% target. (AC-001)
+- [x] Publish the availability result through the operational monitoring view. (AC-001)
+- [x] Exclude only maintenance announced at least 24 hours ahead from the calculation. (AC-001, edge case)

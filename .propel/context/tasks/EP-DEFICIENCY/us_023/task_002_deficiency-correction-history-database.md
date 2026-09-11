@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Persist the correction operation, actor, and timestamp without overwriting prior history. (AC-001)
-- [ ] Persist retained source evidence and source-deficiency links for corrected records. (AC-001)
-- [ ] Require a source boundary for split history records. (edge case)
-- [ ] Roll back the correction transaction when split validation fails. (edge case)
+- [x] Persist the correction operation, actor, and timestamp without overwriting prior history. (AC-001)
+- [x] Persist retained source evidence and source-deficiency links for corrected records. (AC-001)
+- [x] Require a source boundary for split history records. (edge case)
+- [x] Roll back the correction transaction when split validation fails. (edge case)

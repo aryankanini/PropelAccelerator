@@ -62,7 +62,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Accept extracted SOD, Tag, evidence references, and processing-record identity as typed segmentation input. (AC-001)
-- [ ] Produce a distinct candidate for every detected SOD boundary. (AC-001)
-- [ ] Carry the source SOD, Tag, evidence, and processing-record link on every candidate. (AC-001)
-- [ ] Return an ambiguous boundary as correction-required without finalizing its candidate. (edge case)
+- [x] Accept extracted SOD, Tag, evidence references, and processing-record identity as typed segmentation input. (AC-001)
+- [x] Produce a distinct candidate for every detected SOD boundary. (AC-001)
+- [x] Carry the source SOD, Tag, evidence, and processing-record link on every candidate. (AC-001)
+- [x] Return an ambiguous boundary as correction-required without finalizing its candidate. (edge case)

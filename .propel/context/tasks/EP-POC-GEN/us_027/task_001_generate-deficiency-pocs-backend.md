@@ -56,7 +56,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Process each confirmed deficiency as an independent POC job input. (AC-001)
-- [ ] Request a grounded draft only with approved source context. (AC-001)
-- [ ] Persist the returned draft with its deficiency and source-set version. (AC-001)
-- [ ] Record an error against only the failed deficiency and leave it available for manual drafting. (edge case)
+- [x] Process each confirmed deficiency as an independent POC job input. (AC-001)
+- [x] Request a grounded draft only with approved source context. (AC-001)
+- [x] Persist the returned draft with its deficiency and source-set version. (AC-001)
+- [x] Record an error against only the failed deficiency and leave it available for manual drafting. (edge case)

@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize governance users before approving a source. (AC-001)
-- [ ] Require complete source metadata before approval. (AC-001)
-- [ ] Record the approver and timestamp when the source becomes retrieval eligible. (AC-001)
-- [ ] Leave source state unchanged for unauthorized approval attempts. (edge case)
+- [x] Authorize governance users before approving a source. (AC-001)
+- [x] Require complete source metadata before approval. (AC-001)
+- [x] Record the approver and timestamp when the source becomes retrieval eligible. (AC-001)
+- [x] Leave source state unchanged for unauthorized approval attempts. (edge case)

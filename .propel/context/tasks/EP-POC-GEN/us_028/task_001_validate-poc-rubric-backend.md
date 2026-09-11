@@ -67,7 +67,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Evaluate each draft against approved required POC elements. (AC-001)
-- [ ] Produce a quality score and element-level validation result before review. (AC-001)
-- [ ] Block the approval path when a required element is absent. (edge case)
-- [ ] Identify every missing required element in the blocked result. (edge case)
+- [x] Evaluate each draft against approved required POC elements. (AC-001)
+- [x] Produce a quality score and element-level validation result before review. (AC-001)
+- [x] Block the approval path when a required element is absent. (edge case)
+- [x] Identify every missing required element in the blocked result. (edge case)

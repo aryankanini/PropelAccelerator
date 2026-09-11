@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize the bulk request within each selected record scope. (AC-001)
-- [ ] Evaluate approval prerequisites independently for every selected record. (AC-001)
-- [ ] Create a reviewer and timestamp audit entry for each approved record. (AC-001)
-- [ ] Return each ineligible record with its reason and preserve its state. (edge case)
+- [x] Authorize the bulk request within each selected record scope. (AC-001)
+- [x] Evaluate approval prerequisites independently for every selected record. (AC-001)
+- [x] Create a reviewer and timestamp audit entry for each approved record. (AC-001)
+- [x] Return each ineligible record with its reason and preserve its state. (edge case)

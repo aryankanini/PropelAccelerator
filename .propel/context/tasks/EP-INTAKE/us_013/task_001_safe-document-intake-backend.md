@@ -55,9 +55,9 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Check intake authorization before processing document metadata. (AC-001)
-- [ ] Record an unauthorized upload attempt in the audit boundary. (AC-001)
-- [ ] Inspect file content and media signature without executing embedded content. (edge case)
-- [ ] Reject unreadable and unsupported content with a sanitized error outcome. (AC-001)
-- [ ] Reject extension-spoofed content after content inspection. (edge case)
-- [ ] Prevent invalid intake outcomes from reaching an approved processing state. (AC-001)
+- [x] Check intake authorization before processing document metadata. (AC-001)
+- [x] Record an unauthorized upload attempt in the audit boundary. (AC-001)
+- [x] Inspect file content and media signature without executing embedded content. (edge case)
+- [x] Reject unreadable and unsupported content with a sanitized error outcome. (AC-001)
+- [x] Reject extension-spoofed content after content inspection. (edge case)
+- [x] Prevent invalid intake outcomes from reaching an approved processing state. (AC-001)

@@ -63,8 +63,8 @@ HealthcareAccelerator/
 - [ ] Run the configured upload load test and inspect the acknowledgement percentile query.
 
 ## Implementation Checklist
-- [ ] Define a 100-concurrent-session upload scenario using standard documents. (AC-001)
-- [ ] Measure acknowledgement when the API returns the processing-record identifier. (AC-001)
-- [ ] Calculate and report the 95th percentile acknowledgement latency. (AC-001)
-- [ ] Set the performance threshold to at most 2 seconds at the 95th percentile. (AC-001)
-- [ ] Emit queue-delay telemetry separately from synchronous acknowledgement timing. (AC-001, edge case)
+- [x] Define a 100-concurrent-session upload scenario using standard documents. (AC-001)
+- [x] Measure acknowledgement when the API returns the processing-record identifier. (AC-001)
+- [x] Calculate and report the 95th percentile acknowledgement latency. (AC-001)
+- [x] Set the performance threshold to at most 2 seconds at the 95th percentile. (AC-001)
+- [x] Emit queue-delay telemetry separately from synchronous acknowledgement timing. (AC-001, edge case)

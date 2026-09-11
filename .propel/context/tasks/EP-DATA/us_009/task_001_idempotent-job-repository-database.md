@@ -60,8 +60,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Use processing-record and attempt IDs as the stable idempotency key. (AC-001)
-- [ ] Create the job through an atomic create-or-return operation. (AC-001)
-- [ ] Return the original job outcome for a repeated command identity. (AC-001)
-- [ ] Classify a unique-key conflict as a recoverable duplicate response. (AC-001, edge case)
-- [ ] Preserve a single job record under concurrent attempts. (edge case)
+- [x] Use processing-record and attempt IDs as the stable idempotency key. (AC-001)
+- [x] Create the job through an atomic create-or-return operation. (AC-001)
+- [x] Return the original job outcome for a repeated command identity. (AC-001)
+- [x] Classify a unique-key conflict as a recoverable duplicate response. (AC-001, edge case)
+- [x] Preserve a single job record under concurrent attempts. (edge case)

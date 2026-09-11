@@ -66,7 +66,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Require structured required-element, evidence, and confidence fields. (AC-001)
-- [ ] Reject malformed or additional response properties before review. (AC-001)
-- [ ] Map a missing required element to a blocked validation outcome. (edge case)
-- [ ] Preserve the missing-element identity in the refusal or validation result. (edge case)
+- [x] Require structured required-element, evidence, and confidence fields. (AC-001)
+- [x] Reject malformed or additional response properties before review. (AC-001)
+- [x] Map a missing required element to a blocked validation outcome. (edge case)
+- [x] Preserve the missing-element identity in the refusal or validation result. (edge case)

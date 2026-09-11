@@ -55,7 +55,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Authorize governance users before returning inventory data. (AC-001)
-- [ ] Filter sources by reference, version, and approval state. (AC-001)
-- [ ] Label only approved sources as authoritative. (AC-001)
-- [ ] Return empty searches as a bounded, paginated result set. (edge case)
+- [x] Authorize governance users before returning inventory data. (AC-001)
+- [x] Filter sources by reference, version, and approval state. (AC-001)
+- [x] Label only approved sources as authoritative. (AC-001)
+- [x] Return empty searches as a bounded, paginated result set. (edge case)

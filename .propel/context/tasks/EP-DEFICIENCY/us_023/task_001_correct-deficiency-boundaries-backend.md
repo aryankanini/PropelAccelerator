@@ -56,7 +56,7 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Require review permission for every merge, split, and create correction command. (AC-001)
-- [ ] Preserve inherited SOD, Tag, and evidence links on corrected records. (AC-001)
-- [ ] Send actor and timestamp attribution with each accepted correction. (AC-001)
-- [ ] Reject a split without a valid source boundary before changing records. (edge case)
+- [x] Require review permission for every merge, split, and create correction command. (AC-001)
+- [x] Preserve inherited SOD, Tag, and evidence links on corrected records. (AC-001)
+- [x] Send actor and timestamp attribution with each accepted correction. (AC-001)
+- [x] Reject a split without a valid source boundary before changing records. (edge case)

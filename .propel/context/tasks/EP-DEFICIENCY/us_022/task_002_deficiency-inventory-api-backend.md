@@ -55,6 +55,6 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Return Tag, SOD, evidence references, and segmentation status for every candidate. (AC-001)
-- [ ] Return an explicit incomplete inventory outcome when no candidates exist. (edge case)
-- [ ] Exclude POC-generation actions from an incomplete inventory response. (edge case)
+- [x] Return Tag, SOD, evidence references, and segmentation status for every candidate. (AC-001)
+- [x] Return an explicit incomplete inventory outcome when no candidates exist. (edge case)
+- [x] Exclude POC-generation actions from an incomplete inventory response. (edge case)

@@ -63,8 +63,8 @@ HealthcareAccelerator/
 - [ ] Integration tests pass (if applicable)
 
 ## Implementation Checklist
-- [ ] Stream accepted source bytes to immutable object storage. (AC-001)
-- [ ] Compute a SHA-256 content hash during the upload stream. (AC-001)
-- [ ] Return the stored object identity and detected media type to the persistence boundary. (AC-001)
-- [ ] Verify stored-object integrity before queuing downstream processing. (AC-001)
-- [ ] Mark a hash mismatch as a failed upload with no downstream processing side effect. (edge case)
+- [x] Stream accepted source bytes to immutable object storage. (AC-001)
+- [x] Compute a SHA-256 content hash during the upload stream. (AC-001)
+- [x] Return the stored object identity and detected media type to the persistence boundary. (AC-001)
+- [x] Verify stored-object integrity before queuing downstream processing. (AC-001)
+- [x] Mark a hash mismatch as a failed upload with no downstream processing side effect. (edge case)
