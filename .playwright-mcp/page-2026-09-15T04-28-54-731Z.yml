@@ -1,0 +1,35 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to main content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "CMS-2567 Compliance Assistant" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - navigation "Primary navigation" [ref=f1e6]:
+        - link "Queue" [ref=f1e7] [cursor=pointer]:
+          - /url: /
+        - link "Upload" [ref=f1e8] [cursor=pointer]:
+          - /url: /upload
+        - link "Governance" [ref=f1e9] [cursor=pointer]:
+          - /url: /governance
+        - link "Outcomes" [ref=f1e10] [cursor=pointer]:
+          - /url: /outcomes
+  - main [ref=f1e11]:
+    - paragraph [ref=f1e12]: Riverside Nursing Center / Format 2
+    - heading "Review Extracted Fields" [level=1] [ref=f1e13]
+    - generic [ref=f1e15]:
+      - generic [ref=f1e16]:
+        - heading "Draft values" [level=2] [ref=f1e17]
+        - generic [ref=f1e18]:
+          - generic [ref=f1e19]: Provider name
+          - textbox "Provider name" [ref=f1e20]: Riverside Nursing Center
+          - generic [ref=f1e21]: Provider number
+          - textbox "Provider number" [ref=f1e22]: "145672"
+          - generic [ref=f1e23]: Survey date
+          - textbox "Survey date" [ref=f1e24]: 08/12/2026
+          - generic [ref=f1e25]: Tag
+          - textbox "Tag" [ref=f1e26]: F689
+          - button "Verify fields and review deficiencies" [ref=f1e28] [cursor=pointer]
+      - complementary [ref=f1e29]:
+        - heading "Source evidence" [level=2] [ref=f1e30]
+        - generic [ref=f1e31]: Verify each value against the source document before continuing.

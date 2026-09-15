@@ -1,0 +1,47 @@
+{
+  "schema_url": "https://opentelemetry.io/schemas/1.36.0",
+  "resource": {
+    "service.name": "propeliq.ctx-tracker",
+    "gen_ai.framework": "copilot",
+    "user.name": "AryanPatel",
+    "user.full_name": "aryankanini",
+    "user.id": "AryanPatel",
+    "user.email": "aryan.patel@kanini.com",
+    "host.name": "KANINI-LTP-429",
+    "os.type": "windows",
+    "os.version": "11",
+    "host.arch": "AMD64"
+  },
+  "gen_ai.conversation.id": "copilot-31160-HealthcareAccelerator-65786b8c",
+  "gen_ai.provider.name": "openai",
+  "gen_ai.operation.name": "chat",
+  "gen_ai.request.model": null,
+  "gen_ai.system_instructions": [],
+  "context_window": {
+    "limit_tokens": 128000,
+    "counting_method": "tiktoken"
+  },
+  "created_at": "2026-09-11T16:28:28",
+  "updated_at": "2026-09-11T16:28:27",
+  "_cumulative_input_tokens": 140,
+  "turns": [
+    {
+      "turn_id": 1,
+      "event.name": "gen_ai.client.inference.operation.details",
+      "start_time": "2026-09-11T16:28:27",
+      "gen_ai.operation.name": "chat",
+      "gen_ai.input.messages": [
+        {
+          "role": "user",
+          "parts": [
+            {
+              "type": "text",
+              "content": "Read-only, medium thoroughness exploration in d:\\HealthcareAccelerator. The user asks to complete the backend implementation for the existing Processing Queue frontend. Identify the smallest existing paths and contracts for: creation/persistence of processing records; current processing/status queries; extraction review; POC approval; any PostgreSQL schema/migrations and repositories that can feed a real queue. Also identify where FastAPI routers are composed (if anywhere) and relevant tests. Do not edit files. Return precise paths, named types/methods, and a recommendation for the minimal complete backend slice to replace app.main static queue records. Note blockers or unimplemented infrastructure clearly."
+            }
+          ]
+        }
+      ],
+      "gen_ai.usage.input_tokens": 140
+    }
+  ]
+}

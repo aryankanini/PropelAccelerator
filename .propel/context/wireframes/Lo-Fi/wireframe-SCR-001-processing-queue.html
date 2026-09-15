@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCR-001 Processing Queue</title>
+  <style>
+    :root { --black:#000000; --gray:#666666; --light:#CCCCCC; --white:#FFFFFF; } * { box-sizing:border-box; } body { margin:0; color:var(--black); background:var(--white); font:16px/1.5 Arial,Helvetica,sans-serif; } header,main { max-width:1120px; margin:auto; padding:24px; } header { border-bottom:2px solid var(--black); } nav a,.button { display:inline-block; min-height:44px; margin:8px 12px 0 0; padding:10px 14px; border:2px solid var(--black); color:var(--black); text-decoration:none; } nav a[aria-current="page"],.primary { color:var(--white); background:var(--black); } a:hover,a:focus { outline:3px solid var(--black); outline-offset:3px; } table { width:100%; border-collapse:collapse; margin-top:16px; } th,td { padding:12px; border:1px solid var(--gray); text-align:left; } th { background:var(--light); } @media(max-width:768px) { table { display:block; overflow-x:auto; } }
+  </style>
+</head>
+<body>
+  <!-- UC-001, UC-005 | Navigation Map
+  | Element | Action | Target Screen |
+  | #new-record | click | wireframe-SCR-002-upload-survey-form.html |
+  | #review-record | click | wireframe-SCR-003-extraction-review.html |
+  -->
+  <a href="#main">Skip to main content</a>
+  <header><strong>CMS-2567 Processing</strong><nav aria-label="Primary navigation"><a aria-current="page" href="wireframe-SCR-001-processing-queue.html">Processing queue</a><a href="wireframe-SCR-002-upload-survey-form.html">Upload form</a><a href="wireframe-SCR-008-knowledge-governance.html">Knowledge governance</a><a href="wireframe-SCR-009-pilot-outcomes.html">Pilot outcomes</a></nav></header>
+  <main id="main"><p>Worklist</p><h1>Processing Queue</h1><a id="new-record" class="button primary" href="wireframe-SCR-002-upload-survey-form.html">Start new record</a><section aria-labelledby="queue-heading"><h2 id="queue-heading">Records requiring review</h2><table><thead><tr><th scope="col">Provider</th><th scope="col">Format</th><th scope="col">Stage</th><th scope="col">Action</th></tr></thead><tbody><tr><td>Riverside Nursing Center</td><td>Format 2</td><td>Fields need verification</td><td><a id="review-record" href="wireframe-SCR-003-extraction-review.html">Review fields</a></td></tr><tr><td>Oak Meadows Care</td><td>Format 1</td><td>POC approval blocked</td><td><a href="wireframe-SCR-006-poc-review-approval.html">Review POC</a></td></tr></tbody></table></section></main>
+</body>
+</html>

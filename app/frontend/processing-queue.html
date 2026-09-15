@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Processing Queue | CMS-2567 Compliance Assistant</title>
+  <style>
+    :root {
+      --primitive-ink: #132235;
+      --primitive-canvas: #f5f7f8;
+      --primitive-surface: #ffffff;
+      --primitive-border: #c7d2d9;
+      --primitive-muted: #5b6975;
+      --primitive-teal: #006b6d;
+      --primitive-teal-dark: #004f51;
+      --primitive-teal-soft: #d8f0ef;
+      --primitive-amber: #8a4b00;
+      --primitive-amber-soft: #fff1d6;
+      --primitive-red: #9f1c1c;
+      --primitive-red-soft: #fde7e7;
+      --surface-canvas: var(--primitive-canvas);
+      --surface-raised: var(--primitive-surface);
+      --text-primary: var(--primitive-ink);
+      --text-secondary: var(--primitive-muted);
+      --border-default: var(--primitive-border);
+      --action-primary: var(--primitive-teal);
+      --action-primary-hover: var(--primitive-teal-dark);
+      --feedback-warning: var(--primitive-amber);
+      --feedback-warning-subtle: var(--primitive-amber-soft);
+      --feedback-danger: var(--primitive-red);
+      --feedback-danger-subtle: var(--primitive-red-soft);
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --radius-small: 4px;
+      --radius-medium: 8px;
+      --shadow-raised: 0 2px 8px rgb(19 34 53 / 10%);
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text-primary); background: var(--surface-canvas); font-family: Georgia, "Times New Roman", serif; line-height: 1.5; }
+    button, a { font: inherit; }
+    .skip-link { position: fixed; top: -64px; left: var(--space-4); z-index: 2; padding: var(--space-2) var(--space-3); color: var(--surface-raised); background: var(--text-primary); }
+    .skip-link:focus { top: var(--space-4); }
+    .site-header { border-bottom: 1px solid var(--border-default); background: var(--surface-raised); }
+    .header-content, main { width: min(100% - 32px, 1200px); margin: 0 auto; }
+    .header-content { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); min-height: 76px; }
+    .brand { font-family: Arial, Helvetica, sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0; white-space: nowrap; }
+    nav { display: flex; gap: var(--space-1); }
+    nav a { min-height: 44px; padding: 11px var(--space-3); color: var(--text-secondary); border-bottom: 3px solid transparent; text-decoration: none; }
+    nav a:hover { color: var(--text-primary); background: var(--surface-canvas); }
+    nav a[aria-current="page"] { color: var(--action-primary); border-color: var(--action-primary); font-weight: 700; }
+    main { padding: var(--space-10) 0 64px; }
+    .eyebrow { margin: 0 0 var(--space-2); color: var(--action-primary); font-family: Arial, Helvetica, sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .page-heading { display: flex; align-items: end; justify-content: space-between; gap: var(--space-6); margin-bottom: var(--space-8); }
+    h1, h2, p { margin-top: 0; }
+    h1 { margin-bottom: var(--space-2); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+    h2 { margin-bottom: var(--space-1); font-size: 1.35rem; line-height: 1.25; }
+    .intro { max-width: 640px; margin-bottom: 0; color: var(--text-secondary); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px var(--space-4); border: 1px solid var(--action-primary); border-radius: var(--radius-small); color: var(--surface-raised); background: var(--action-primary); font-family: Arial, Helvetica, sans-serif; font-size: .94rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color 150ms ease, border-color 150ms ease; }
+    .button:hover { border-color: var(--action-primary-hover); background: var(--action-primary-hover); }
+    .button:active { transform: translateY(1px); }
+    .button:disabled { opacity: .4; cursor: not-allowed; }
+    :focus-visible { outline: 3px solid var(--text-primary); outline-offset: 3px; }
+    .queue-panel { border: 1px solid var(--border-default); border-radius: var(--radius-medium); background: var(--surface-raised); box-shadow: var(--shadow-raised); }
+    .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-6); border-bottom: 1px solid var(--border-default); }
+    .record-count { margin: 0; color: var(--text-secondary); font-family: Arial, Helvetica, sans-serif; font-size: .9rem; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 700px; border-collapse: collapse; }
+    th, td { padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--border-default); text-align: left; }
+    th { color: var(--text-secondary); background: #edf1f2; font-family: Arial, Helvetica, sans-serif; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .provider { font-weight: 700; }
+    .status { display: inline-flex; align-items: center; min-height: 28px; padding: var(--space-1) var(--space-2); border-radius: var(--radius-small); font-family: Arial, Helvetica, sans-serif; font-size: .84rem; font-weight: 700; }
+    .status--verification { color: var(--feedback-warning); background: var(--feedback-warning-subtle); }
+    .status--blocked { color: var(--feedback-danger); background: var(--feedback-danger-subtle); }
+    .review-link { color: var(--action-primary); font-family: Arial, Helvetica, sans-serif; font-weight: 700; }
+    .review-link:hover { color: var(--action-primary-hover); }
+    .state { padding: 72px var(--space-6); text-align: center; }
+    .state p { max-width: 440px; margin: 0 auto var(--space-5); color: var(--text-secondary); }
+    .state[hidden] { display: none; }
+    .skeleton { height: 24px; margin: 12px 0; border-radius: var(--radius-small); background: linear-gradient(90deg, #e5eaec 25%, #f3f5f6 50%, #e5eaec 75%); background-size: 200% 100%; animation: loading 1.4s infinite; }
+    .skeleton:nth-child(2) { width: 78%; }
+    .skeleton:nth-child(3) { width: 92%; }
+    @keyframes loading { to { background-position: -200% 0; } }
+    @media (max-width: 767px) {
+      .header-content { align-items: flex-start; flex-direction: column; gap: 0; padding: var(--space-4) 0 0; }
+      nav { width: 100%; overflow-x: auto; }
+      .page-heading { align-items: flex-start; flex-direction: column; }
+      .page-heading .button { width: 100%; }
+      .panel-heading { align-items: flex-start; flex-direction: column; }
+      main { padding-top: var(--space-8); }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to processing queue</a>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="brand" href="/" aria-label="CMS-2567 Compliance Assistant home">CMS-2567 Compliance Assistant</a>
+      <nav aria-label="Primary navigation">
+        <a aria-current="page" href="/">Processing queue</a>
+        <a href="/wireframes/wireframe-SCR-002-upload-survey-form.html">Upload form</a>
+        <a href="/wireframes/wireframe-SCR-008-knowledge-governance.html">Knowledge governance</a>
+        <a href="/wireframes/wireframe-SCR-009-pilot-outcomes.html">Pilot outcomes</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="page-heading" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Worklist</p>
+        <h1 id="page-title">Processing queue</h1>
+        <p class="intro">Prioritize records that need staff review before a corrective action plan can move forward.</p>
+      </div>
+      <a class="button" href="/wireframes/wireframe-SCR-002-upload-survey-form.html">Start new record</a>
+    </section>
+    <section class="queue-panel" aria-labelledby="queue-heading" aria-describedby="queue-summary">
+      <div class="panel-heading">
+        <div>
+          <h2 id="queue-heading">Records requiring review</h2>
+          <p id="queue-summary" class="record-count" aria-live="polite">Loading records requiring review</p>
+        </div>
+      </div>
+      <div id="loading-state" class="state" aria-live="polite">
+        <span class="skeleton"></span><span class="skeleton"></span><span class="skeleton"></span>
+        <p>Loading records requiring review.</p>
+      </div>
+      <div id="empty-state" class="state" hidden>
+        <h2>No records need review</h2>
+        <p>New records will appear here when they require staff verification or plan approval.</p>
+        <a class="button" href="/wireframes/wireframe-SCR-002-upload-survey-form.html">Start new record</a>
+      </div>
+      <div id="error-state" class="state" role="alert" hidden>
+        <h2>Processing records are unavailable</h2>
+        <p>Try loading the queue again. The current record was not changed.</p>
+        <button id="retry-button" class="button" type="button">Retry</button>
+      </div>
+      <div id="table-wrap" class="table-wrap" hidden>
+        <table>
+          <thead><tr><th scope="col">Provider</th><th scope="col">Format</th><th scope="col">Stage</th><th scope="col">Action</th></tr></thead>
+          <tbody id="queue-records"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const endpoint = "/processing-queue";
+    const elements = {
+      count: document.querySelector("#queue-summary"),
+      error: document.querySelector("#error-state"),
+      empty: document.querySelector("#empty-state"),
+      loading: document.querySelector("#loading-state"),
+      records: document.querySelector("#queue-records"),
+      retry: document.querySelector("#retry-button"),
+      table: document.querySelector("#table-wrap")
+    };
+
+    function setState(state) {
+      elements.loading.hidden = state !== "loading";
+      elements.empty.hidden = state !== "empty";
+      elements.error.hidden = state !== "error";
+      elements.table.hidden = state !== "ready";
+    }
+
+    function renderRecords(records) {
+      elements.records.replaceChildren(...records.map((record) => {
+        const row = document.createElement("tr");
+        const cells = [record.provider, record.format];
+        for (const value of cells) {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.append(cell);
+        }
+        const stage = document.createElement("td");
+        const status = document.createElement("span");
+        status.className = `status status--${record.stage_key}`;
+        status.textContent = record.stage;
+        stage.append(status);
+        row.append(stage);
+        const action = document.createElement("td");
+        const link = document.createElement("a");
+        link.className = "review-link";
+        link.href = record.review_url;
+        link.textContent = record.action;
+        action.append(link);
+        row.append(action);
+        return row;
+      }));
+    }
+
+    async function loadQueue() {
+      setState("loading");
+      elements.count.textContent = "Loading records requiring review";
+      try {
+        const response = await fetch(endpoint, { headers: { Accept: "application/json" } });
+        if (!response.ok) throw new Error("Processing queue request failed");
+        const payload = await response.json();
+        const records = Array.isArray(payload.records) ? payload.records : [];
+        if (records.length === 0) {
+          elements.count.textContent = "No records requiring review";
+          setState("empty");
+          return;
+        }
+        renderRecords(records);
+        elements.count.textContent = `${records.length} records requiring review`;
+        setState("ready");
+      } catch (error) {
+        elements.count.textContent = "Unable to load records requiring review";
+        setState("error");
+      }
+    }
+
+    elements.retry.addEventListener("click", loadQueue);
+    loadQueue();
+  </script>
+</body>
+</html>

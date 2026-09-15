@@ -31,6 +31,42 @@ def test_create_app_with_valid_settings_exposes_typed_health_response() -> None:
         }
 
 
+def test_create_app_exposes_processing_queue_page_and_records() -> None:
+    application = create_app(lambda: AppSettings(environment="test"))
+
+    with TestClient(application) as client:
+        page_response = client.get("/")
+        queue_response = client.get("/processing-queue")
+        upload_response = client.get(
+            "/wireframes/wireframe-SCR-002-upload-survey-form.html"
+        )
+
+    assert page_response.status_code == 200
+    assert "Processing queue" in page_response.text
+    assert queue_response.status_code == 200
+    assert upload_response.status_code == 200
+    assert queue_response.json() == {
+        "records": [
+            {
+                "provider": "Riverside Nursing Center",
+                "format": "Format 2",
+                "stage": "Fields need verification",
+                "stage_key": "verification",
+                "action": "Review fields",
+                "review_url": "/wireframes/wireframe-SCR-003-extraction-review.html",
+            },
+            {
+                "provider": "Oak Meadows Care",
+                "format": "Format 1",
+                "stage": "POC approval blocked",
+                "stage_key": "blocked",
+                "action": "Review POC",
+                "review_url": "/wireframes/wireframe-SCR-006-poc-review-approval.html",
+            },
+        ]
+    }
+
+
 def test_create_app_with_missing_required_configuration_fails_before_requests() -> None:
     application = create_app(lambda: AppSettings.from_environment())
 

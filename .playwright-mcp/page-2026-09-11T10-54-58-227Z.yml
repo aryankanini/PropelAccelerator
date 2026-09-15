@@ -1,0 +1,51 @@
+- generic [active] [ref=e1]:
+  - link "Skip to processing queue" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "CMS-2567 Compliance Assistant home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - text: CMS-2567 Compliance Assistant
+      - navigation "Primary navigation" [ref=e6]:
+        - link "Processing queue" [ref=e7] [cursor=pointer]:
+          - /url: /
+        - link "Upload form" [ref=e8] [cursor=pointer]:
+          - /url: /wireframes/wireframe-SCR-002-upload-survey-form.html
+        - link "Knowledge governance" [ref=e9] [cursor=pointer]:
+          - /url: /wireframes/wireframe-SCR-008-knowledge-governance.html
+        - link "Pilot outcomes" [ref=e10] [cursor=pointer]:
+          - /url: /wireframes/wireframe-SCR-009-pilot-outcomes.html
+  - main [ref=e11]:
+    - region [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: Worklist
+        - heading "Processing queue" [level=1] [ref=e15]
+        - paragraph [ref=e16]: Prioritize records that need staff review before a corrective action plan can move forward.
+      - link "Start new record" [ref=e17] [cursor=pointer]:
+        - /url: /wireframes/wireframe-SCR-002-upload-survey-form.html
+    - region [ref=e18]:
+      - generic [ref=e20]:
+        - heading "Records requiring review" [level=2] [ref=e21]
+        - paragraph [ref=e22]: 2 records requiring review
+      - table [ref=e24]:
+        - rowgroup [ref=e25]:
+          - row [ref=e26]:
+            - columnheader "Provider" [ref=e27]
+            - columnheader "Format" [ref=e28]
+            - columnheader "Stage" [ref=e29]
+            - columnheader "Action" [ref=e30]
+        - rowgroup [ref=e31]:
+          - row [ref=e32]:
+            - cell "Riverside Nursing Center" [ref=e33]
+            - cell "Format 2" [ref=e34]
+            - cell "Fields need verification" [ref=e35]
+            - cell [ref=e37]:
+              - link "Review fields" [ref=e38] [cursor=pointer]:
+                - /url: /wireframes/wireframe-SCR-003-extraction-review.html
+          - row [ref=e39]:
+            - cell "Oak Meadows Care" [ref=e40]
+            - cell "Format 1" [ref=e41]
+            - cell "POC approval blocked" [ref=e42]
+            - cell [ref=e44]:
+              - link "Review POC" [ref=e45] [cursor=pointer]:
+                - /url: /wireframes/wireframe-SCR-006-poc-review-approval.html

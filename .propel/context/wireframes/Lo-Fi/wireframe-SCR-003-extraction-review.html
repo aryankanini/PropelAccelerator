@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SCR-003 Extraction Review</title>
+  <style>
+    :root { --black:#000000; --gray:#666666; --light:#CCCCCC; --white:#FFFFFF; } * { box-sizing:border-box; } body { margin:0; color:var(--black); background:var(--white); font:16px/1.5 Arial,Helvetica,sans-serif; } header,main { max-width:1120px; margin:auto; padding:24px; } header { border-bottom:2px solid var(--black); } a,.button { display:inline-block; min-height:44px; margin:8px 12px 0 0; padding:10px 14px; border:2px solid var(--black); color:var(--black); text-decoration:none; background:var(--white); } .primary { color:var(--white); background:var(--black); } a:hover,a:focus,button:hover,button:focus,input:focus { outline:3px solid var(--black); outline-offset:3px; } .grid { display:grid; grid-template-columns:3fr 2fr; gap:24px; } section,aside { margin-top:24px; padding:20px; border:2px solid var(--black); } label,input { display:block; width:100%; } input { min-height:44px; margin:4px 0 12px; border:1px solid var(--gray); } .flag { border-left:8px solid var(--black); padding-left:12px; } @media(max-width:768px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <!-- UC-002, UC-005 | Navigation Map
+  | Element | Action | Target Screen |
+  | #back-queue | click | wireframe-SCR-001-processing-queue.html |
+  | #segmentation-form | submit | wireframe-SCR-004-deficiency-segmentation.html |
+  -->
+  <a href="#main">Skip to main content</a><header><strong>CMS-2567 Processing</strong><nav aria-label="Record navigation"><a id="back-queue" href="wireframe-SCR-001-processing-queue.html">Processing queue</a><a aria-current="page" href="wireframe-SCR-003-extraction-review.html">Extraction review</a><a href="wireframe-SCR-004-deficiency-segmentation.html">Deficiencies</a></nav></header>
+  <main id="main"><p>Riverside Nursing Center / Format 2</p><h1>Review Extracted Fields</h1><div class="grid"><section aria-labelledby="field-heading"><h2 id="field-heading">Draft values</h2><form id="segmentation-form" action="wireframe-SCR-004-deficiency-segmentation.html"><label for="provider">Provider name</label><input id="provider" value="Riverside Nursing Center" required><label for="number">Provider number</label><input id="number" value="145672" required><label for="date">Survey date</label><input id="date" value="08/12/2026" required><label for="tag">Tag</label><input id="tag" value="F689" required><button class="button primary" type="submit">Verify fields and review deficiencies</button></form></section><aside aria-labelledby="evidence-heading"><h2 id="evidence-heading">Source evidence</h2><div class="flag"><p>Provider number confidence: low</p><a href="#evidence-region">Open source region</a></div><div id="evidence-region"><p>Document page 1, lines 14-20</p><div aria-label="Source document placeholder" role="img" style="height:180px;background:#CCCCCC;border:1px solid #666666;">Evidence placeholder</div></div><p>Format 2 supports POC and completion date extraction.</p></aside></div></main>
+</body>
+</html>
